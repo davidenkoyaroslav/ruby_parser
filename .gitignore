@@ -1,0 +1,5 @@
+/output/ 
+/media/ 
+*.log 
+*.sqlite 
+/vendor 

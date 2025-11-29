@@ -1,0 +1,5 @@
+AllCops:
+  NewCops: enable
+
+Lint/EmptyFile:
+  Enabled: false

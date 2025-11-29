@@ -1,0 +1,17 @@
+web_scraping:
+
+  start_page: "https://game-shop.com.ua/ua/category/igryi-dlya-playstation-5"
+
+
+  product_card_selector: 'a[href*="/product/"]'
+
+
+  product_name_selector: ""
+
+
+  product_price_selector: ""
+
+  product_image_selector: "img.product-image"
+
+
+  product_description_selector: ""
