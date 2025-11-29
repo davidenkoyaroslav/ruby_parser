@@ -1,4 +1,3 @@
-# lib/items/item_container.rb
 require_relative '../logger_manager'
 
 module MyApplicationDavydenko

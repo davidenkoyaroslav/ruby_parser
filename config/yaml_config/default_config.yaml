@@ -1,12 +1,12 @@
-database_config:                # Налаштування типу БД
-  database_type: sqlite         # або "mongodb"
+database_config:               
+  database_type: sqlite         
 
-  sqlite_database:              # Налаштування SQLite
+  sqlite_database:             
     db_file: "db/local_database.sqlite"
-    timeout: 5000               # Час очікування (мс)
-    pool_size: 5                # Розмір пулу з'єднань
+    timeout: 5000             
+    pool_size: 5                
 
-mongodb_database:               # Налаштування MongoDB
+mongodb_database:              
   uri: "mongodb://localhost:27017"
-  db_name: "my_database"        # Назва бази MongoDB
+  db_name: "my_database"        
 

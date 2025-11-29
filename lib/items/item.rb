@@ -1,4 +1,3 @@
-# lib/items/item.rb
 require_relative '../logger_manager'
 
 module MyApplicationDavydenko
@@ -41,7 +40,6 @@ module MyApplicationDavydenko
 
     alias_method :info, :to_s
 
-    # Простий "фейковий" генератор без Faker
     def self.generate_fake
       new(
         name: "Test_#{rand(1000)}",

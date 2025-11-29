@@ -16,7 +16,6 @@ module MyApplicationDavydenko
       self.class.increase_count
     end
 
-    # Enumerable
     def each(&block)
       @items.each(&block)
     end
@@ -33,7 +32,6 @@ module MyApplicationDavydenko
       end
     end
 
-    # -------------------- ФАЙЛИ --------------------
 
     def save_to_file(path)
       File.write(path, @items.map(&:to_s).join("\n"))
@@ -60,7 +58,7 @@ module MyApplicationDavydenko
       end
     end
 
-    # -------------------- SQLITE --------------------
+
 
     def save_to_sqlite(db)
       return if @items.empty?

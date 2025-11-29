@@ -2,16 +2,18 @@ module MyApplicationDavydenko
   class Configurator
     attr_reader :config
 
+    DEFAULT_CONFIG = {
+      run_website_parser:  0,
+      run_save_to_csv:     0,
+      run_save_to_json:    0,
+      run_save_to_yaml:    0,
+      run_save_to_sqlite:  0,
+      run_save_to_mongodb: 0,
+      run_save_media:      0
+    }.freeze
 
     def initialize
-      @config = {
-        run_website_parser:  0, 
-        run_save_to_csv:     0, 
-        run_save_to_json:    0, 
-        run_save_to_yaml:    0, 
-        run_save_to_sqlite:  0, 
-        run_save_to_mongodb: 0  
-      }
+      @config = DEFAULT_CONFIG.dup
     end
 
     def configure(overrides = {})
@@ -26,16 +28,8 @@ module MyApplicationDavydenko
       @config
     end
 
-    
     def self.available_methods
-      %i[
-        run_website_parser
-        run_save_to_csv
-        run_save_to_json
-        run_save_to_yaml
-        run_save_to_sqlite
-        run_save_to_mongodb
-      ]
+      DEFAULT_CONFIG.keys
     end
   end
 end
